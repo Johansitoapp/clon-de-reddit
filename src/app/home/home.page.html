@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Reddit Clone /r/aww
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="goToDetail(post)" *ngFor="let post of posts">
+      <img [src]="post.data.thumbnail" alt="thumb" class="thumbnail">
+      <ion-label>{{ post.data.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
